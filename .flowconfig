@@ -1,0 +1,18 @@
+[include]
+<PROJECT_ROOT>/src/
+
+[ignore]
+<PROJECT_ROOT>/dist/
+<PROJECT_ROOT>/config/
+
+[libs]
+<PROJECT_ROOT>/node_modules/
+
+[lints]
+
+[options]
+suppress_comment= \\(.\\|\n\\)*\\$FlowIgnore
+include_warnings=true
+munge_underscores=true
+
+[strict]
