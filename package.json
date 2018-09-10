@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-jss-theme",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "storybook addon with jss theme",
   "main": "dist/index.js",
   "scripts": {
@@ -12,6 +12,10 @@
     "example": "start-storybook -p 3000 -c ./example/.storybook -s ./example"
   },
   "author": "Adam Makświej <adam.makswiej@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vertexbz/storybook-addon-jss-theme.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@storybook/addons": "^3.4.8",
@@ -40,9 +44,9 @@
     "rimraf": "^2.6.2"
   },
   "peerDependencies": {
-    "@storybook/addons": "^3.4.8",
-    "react": "^16.3.0",
-    "react-jss": "^8.6.1"
+    "@storybook/addons": "^3",
+    "react": "^15 || ^16",
+    "react-jss": "^8"
   },
   "keywords": [
     "storybook",

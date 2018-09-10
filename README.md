@@ -47,7 +47,27 @@ yarn example
 ## API
 
 ### Theme object
-Theme object must contain two fields
+Theme object must contain two fields 
+- `name` (string): This contains the theme name displayed in Themes panel
+- `variables` (object): This object holds all theme variables
+
+#### Example
+
+```javascript
+const defaultTheme = {
+    name: 'DEFAULT',
+    variables: {
+        backgroundColor: 'lightgrey',
+        textColor: 'black',
+        borderRadius: '30px'
+    }
+};
+```  
 
 ### `withThemesProvider`
+`withThemesProvider` decorator takes one required argument which is an array of themes (look above for shape of theme object)
+and second (optional) which is a ThemeProvider component for custom theme providers created with JSS's createTheme function 
 
+```
+withThemesProvider(themes[, ThemeProvider])
+```
