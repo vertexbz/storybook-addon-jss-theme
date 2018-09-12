@@ -1,12 +1,11 @@
 [include]
-<PROJECT_ROOT>/src/
+./src/
 
 [ignore]
-<PROJECT_ROOT>/dist/
-<PROJECT_ROOT>/config/
+./dist/
+./config/
 
 [libs]
-<PROJECT_ROOT>/node_modules/
 
 [lints]
 

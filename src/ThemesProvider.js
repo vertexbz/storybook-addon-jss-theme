@@ -5,11 +5,11 @@ import { ThemeProvider as JssThemeProvider } from 'react-jss';
 import * as event from './events';
 import type { ThemeType, ThemeProviderComponent } from './types';
 
-type ThemesProviderProps = $ReadOnly<{
+type ThemesProviderProps = {
     ThemeProvider: ThemeProviderComponent,
-    themes: ThemeType[],
-    children: React.Node
-}>;
+    themes: Array<ThemeType>,
+    children: React.Element<*>
+};
 
 
 type ThemesProviderState = {

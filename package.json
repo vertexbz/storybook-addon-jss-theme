@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-jss-theme",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "description": "storybook addon with jss theme",
   "main": "dist/index.js",
   "scripts": {

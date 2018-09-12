@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemesProvider should work properly 1`] = `null`;
+
+exports[`ThemesProvider should work properly 2`] = `<div />`;
+
+exports[`ThemesProvider should work properly 3`] = `<div />`;

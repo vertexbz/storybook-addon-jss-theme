@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Themes should work properly 1`] = `null`;
+
+exports[`Themes should work properly 2`] = `
+<div
+  class="Themes-Row-0-1-1"
+>
+  <div
+    class="Themes-Button-0-1-2 Themes-SelectedButton-0-1-3"
+  >
+    theme 1
+  </div>
+  <div
+    class="Themes-Button-0-1-2"
+  >
+    theme 2
+  </div>
+</div>
+`;
+
+exports[`Themes should work properly 3`] = `
+<div
+  class="Themes-Row-0-1-1"
+>
+  <div
+    class="Themes-Button-0-1-2"
+  >
+    theme 1
+  </div>
+  <div
+    class="Themes-Button-0-1-2 Themes-SelectedButton-0-1-3"
+  >
+    theme 2
+  </div>
+</div>
+`;
+
+exports[`Themes should work properly 4`] = `
+<div
+  class="Themes-Row-0-1-1"
+>
+  <div
+    class="Themes-Button-0-1-2 Themes-SelectedButton-0-1-3"
+  >
+    theme 1
+  </div>
+  <div
+    class="Themes-Button-0-1-2"
+  >
+    theme 2
+  </div>
+</div>
+`;

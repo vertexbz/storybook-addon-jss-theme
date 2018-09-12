@@ -1,20 +1,25 @@
 // @flow
 import * as React from 'react';
-import { ButtonStyle, RowStyle, SelectedButtonStyle } from './styles';
+import style from './styles';
 import * as event from './events';
+import injectSheet from 'react-jss';
 import type { ThemeType } from './types';
 
-type ThemesProps = $ReadOnly<{
+type ThemesProps = {
     channel: any,
-    api: any
-}>;
+    api: any,
+    classes: {
+        Button: string,
+        SelectedButton: string,
+        Row: string
+    }
+};
 
 type ThemesState = {
     theme: ?ThemeType,
     themes: ThemeType[]
 };
 
-export default
 class Themes extends React.Component<ThemesProps, ThemesState> {
     state = {
         theme: null,
@@ -59,19 +64,33 @@ class Themes extends React.Component<ThemesProps, ThemesState> {
     }
 
     renderThemeButton(theme: ThemeType, i: number): React.Element<'div'> {
-        const buttonStyle = theme === this.state.theme ? SelectedButtonStyle : ButtonStyle;
-        return <div style={buttonStyle} key={i} onClick={this.setTheme.bind(this, theme)}>{theme.name}</div>;
+        const classNames = [this.props.classes.Button];
+        if (theme === this.state.theme) {
+            classNames.push(this.props.classes.SelectedButton);
+        }
+
+        return (
+            <div
+                className={classNames.join(' ')}
+                key={`${i}-${theme.name}`}
+                onClick={this.setTheme.bind(this, theme)}
+            >
+                {theme.name}
+            </div>
+        );
     }
 
     render(): ?React.Element<'div'> {
-        if (!this.state.themes) {
+        if (!this.state.themes || this.state.themes.length === 0) {
             return null;
         }
 
         return (
-            <div style={RowStyle}>
+            <div className={this.props.classes.Row}>
                 {this.state.themes.map(this.renderThemeButton)}
             </div>
         );
     }
 }
+
+export default injectSheet(style)(Themes);
