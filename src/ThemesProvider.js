@@ -23,7 +23,7 @@ class ThemesProvider extends React.Component<ThemesProviderProps, ThemesProvider
     };
 
     state = {
-        theme: null
+        theme: this.props.themes[0]
     };
 
     constructor(...args: *) {
