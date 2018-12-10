@@ -24,7 +24,7 @@ describe('ThemesProvider', () => {
             }
         ];
 
-        const TestThemesProvider = ({ children }) => children;
+        const TestThemesProvider = ({ children, theme }) => <div {...theme}>{children}</div>;
         const TestStory = () => <div />;
 
         const wrapper = mount(
@@ -33,7 +33,7 @@ describe('ThemesProvider', () => {
             </ThemesProvider>
         );
 
-        expect(wrapper.render()).toMatchSnapshot();
+        expect(wrapper.debug()).toMatchSnapshot();
         expect(addonsMock.__channel.on).toBeCalledTimes(1);
 
         const registerSelectThemeCall = addonsMock.__channel.on.mock.calls[0];
@@ -45,7 +45,7 @@ describe('ThemesProvider', () => {
 
         registerSelectThemeCallback(themes[0]);
         wrapper.update();
-        expect(wrapper.render()).toMatchSnapshot();
+        expect(wrapper.debug()).toMatchSnapshot();
 
         expect(wrapper.find(TestThemesProvider).exists()).toBeTruthy();
         expect(wrapper.find(TestThemesProvider).prop('theme')).toBe(themes[0].variables);
@@ -56,7 +56,7 @@ describe('ThemesProvider', () => {
 
         registerSelectThemeCallback(themes[1]);
         wrapper.update();
-        expect(wrapper.render()).toMatchSnapshot();
+        expect(wrapper.debug()).toMatchSnapshot();
 
         expect(wrapper.find(TestThemesProvider).exists()).toBeTruthy();
         expect(wrapper.find(TestThemesProvider).prop('theme')).toBe(themes[1].variables);

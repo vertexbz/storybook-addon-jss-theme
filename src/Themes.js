@@ -12,7 +12,8 @@ type ThemesProps = {
         Button: string,
         SelectedButton: string,
         Row: string
-    }
+    },
+    active: boolean
 };
 
 type ThemesState = {
@@ -81,7 +82,7 @@ class Themes extends React.Component<ThemesProps, ThemesState> {
     }
 
     render(): ?React.Element<'div'> {
-        if (!this.state.themes || this.state.themes.length === 0) {
+        if (!this.props.active || !this.state.themes || this.state.themes.length === 0) {
             return null;
         }
 

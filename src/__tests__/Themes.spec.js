@@ -15,7 +15,7 @@ describe('Themes', () => {
 
         const channel = new EventEmitter();
 
-        const wrapper = mount(<Themes api={null} channel={channel} />);
+        const wrapper = mount(<Themes api={null} channel={channel} active />);
         expect(wrapper.render()).toMatchSnapshot();
         expect(channelSpies.on).toBeCalledTimes(1);
         expect(channelSpies.emit).not.toBeCalled();

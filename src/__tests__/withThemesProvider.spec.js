@@ -18,7 +18,7 @@ describe('withThemesProvider', () => {
             }
         ];
 
-        const ThemeProvider = jest.fn();
+        const ThemeProvider = jest.fn(({ children }) => children);
 
         const storyDecorator = withThemesProvider(themes, ThemeProvider);
 

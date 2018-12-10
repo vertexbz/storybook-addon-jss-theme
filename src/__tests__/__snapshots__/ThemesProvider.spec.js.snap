@@ -1,7 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThemesProvider should work properly 1`] = `null`;
+exports[`ThemesProvider should work properly 1`] = `
+"<ThemesProvider themes={{...}} ThemeProvider={[Function: TestThemesProvider]}>
+  <TestThemesProvider theme={{...}}>
+    <div var=\\"1\\">
+      <TestStory>
+        <div />
+      </TestStory>
+    </div>
+  </TestThemesProvider>
+</ThemesProvider>"
+`;
 
-exports[`ThemesProvider should work properly 2`] = `<div />`;
+exports[`ThemesProvider should work properly 2`] = `
+"<ThemesProvider themes={{...}} ThemeProvider={[Function: TestThemesProvider]}>
+  <TestThemesProvider theme={{...}}>
+    <div var=\\"1\\">
+      <TestStory>
+        <div />
+      </TestStory>
+    </div>
+  </TestThemesProvider>
+</ThemesProvider>"
+`;
 
-exports[`ThemesProvider should work properly 3`] = `<div />`;
+exports[`ThemesProvider should work properly 3`] = `
+"<ThemesProvider themes={{...}} ThemeProvider={[Function: TestThemesProvider]}>
+  <TestThemesProvider theme={{...}}>
+    <div var=\\"2\\">
+      <TestStory>
+        <div />
+      </TestStory>
+    </div>
+  </TestThemesProvider>
+</ThemesProvider>"
+`;
